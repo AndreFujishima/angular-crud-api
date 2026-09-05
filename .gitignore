@@ -5,6 +5,7 @@ backend/node_modules/
 # Angular files
 frontend/.angular/
 frontend/dist/
+frontend/testes-selenium/node_modules/
 
 # Backend files
 backend/.env

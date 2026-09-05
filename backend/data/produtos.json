@@ -38,5 +38,13 @@
     "categoria": "Eletrônicos",
     "preco": 5299.9,
     "imagem": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 6,
+    "nome": "Notebook Gamer 1788570570146",
+    "descricao": "Notebook para jogos e desenvolvimento.",
+    "categoria": "Eletrônicos",
+    "preco": 3500,
+    "imagem": "https://via.placeholder.com/600x400"
   }
 ]

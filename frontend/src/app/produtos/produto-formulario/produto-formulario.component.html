@@ -12,7 +12,7 @@
   <app-mensagem *ngIf="mensagemErro" [mensagem]="mensagemErro" tipo="erro"></app-mensagem>
   <app-mensagem *ngIf="mensagemSucesso" [mensagem]="mensagemSucesso" tipo="sucesso"></app-mensagem>
 
-  <div class="card shadow-sm border-0 mb-4" *ngIf="!carregando || editandoId">
+  <div class="card shadow-sm border-0 mb-4" *ngIf="!carregando">
     <div class="card-body">
       <form [formGroup]="produtoForm" (ngSubmit)="salvar()">
         <div class="row g-3">
@@ -50,7 +50,7 @@
           </div>
         </div>
         <div class="mt-4 d-flex gap-2">
-          <button type="submit" class="btn btn-primary" [disabled]="produtoForm.invalid || carregando">
+          <button type="submit" id="btnCadastrar" class="btn btn-primary" [disabled]="produtoForm.invalid || carregando">
             {{ editandoId ? 'Salvar Alterações' : 'Cadastrar Produto' }}
           </button>
           <a routerLink="/produtos" class="btn btn-outline-secondary">

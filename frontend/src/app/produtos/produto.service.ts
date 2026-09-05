@@ -15,26 +15,26 @@ export class ProdutoService {
   listar(): Observable<Produto[]> {
     // TODO: implementar GET /api/products
     //return of([]);
-    return of({} as Produto[]); // Retorno vazio temporário para não quebrar a compilação
+    return this.http.get<Produto[]>(this.apiUrl);
   }
 
   buscarPorId(id: number): Observable<Produto> {
     // TODO: implementar GET /api/products/:id
-    return of({} as Produto); // Retorno vazio temporário para não quebrar a compilação
+    return this.http.get<Produto>(`${this.apiUrl}/${id}`); // Retorno vazio temporário para não quebrar a compilação
   }
 
   cadastrar(produto: Produto): Observable<Produto> {
     // TODO: implementar POST /api/products
-    return of(produto); // Retorno temporário para não quebrar a compilação
+    return this.http.post<Produto>(this.apiUrl, produto);
   }
 
   atualizar(id: number, produto: Produto): Observable<Produto> {
     // TODO: implementar PUT /api/products/:id
-    return of(produto); // Retorno temporário para não quebrar a compilação
+    return this.http.put<Produto>(`${this.apiUrl}/${id}`, produto); // Retorno temporário para não quebrar a compilação
   }
 
   excluir(id: number): Observable<void> {
     // TODO: implementar DELETE /api/products/:id
-    return of(undefined); // Retorno temporário para não quebrar a compilação
+    return this.http.delete<void>(`${this.apiUrl}/${id}`); // Retorno temporário para não quebrar a compilação
   }
 }
