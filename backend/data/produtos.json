@@ -46,5 +46,13 @@
     "categoria": "Eletrônicos",
     "preco": 3500,
     "imagem": "https://via.placeholder.com/600x400"
+  },
+  {
+    "id": 7,
+    "nome": "Teclado Gamer",
+    "descricao": "Teclado mecânico para jogos",
+    "categoria": "Informática",
+    "preco": 150,
+    "imagem": "teclado.jpg"
   }
 ]
